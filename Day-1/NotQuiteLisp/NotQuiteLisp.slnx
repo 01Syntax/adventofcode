@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../NotQuiteLisp.Tests/NotQuiteLisp.Tests.csproj" />
+  <Project Path="NotQuiteLisp.csproj" />
+</Solution>
