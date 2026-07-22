@@ -1,6 +1,8 @@
-﻿namespace DayTwoPuzzle.Interactors
+﻿using DayTwoPuzzle.Interfaces;
+
+namespace DayTwoPuzzle.Interactors
 {
-    public class CalculateSurfaceAreaInteractor
+    public class CalculateSurfaceAreaInteractor : ICalculateSurfaceAreaInteractor
     {
         public int Handle(int[,] dimensions)
         {
