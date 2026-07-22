@@ -1,22 +1,23 @@
 ﻿namespace DayTwoPuzzle.Tests.MemberData
 {
-    public class DimensionsMemberData
+    public class CalculateAreaData
     {
         public static IEnumerable<object[]> TestData() =>
         [
             [
-                new[, ]
+                new[,]
                 {
                     {2,3,4}
                 },
-                52
+                6
             ],
+
             [
                 new[,]
                 {
                     {1,1,10}
                 },
-                42
+                1
             ]
         ];
     }

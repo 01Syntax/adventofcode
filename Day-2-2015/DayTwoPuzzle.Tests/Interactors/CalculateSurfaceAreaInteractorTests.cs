@@ -1,4 +1,5 @@
-﻿using DayTwoPuzzle.Tests.MemberData;
+﻿using DayTwoPuzzle.Interactors;
+using DayTwoPuzzle.Tests.MemberData;
 
 namespace DayTwoPuzzle.Tests.Interactors
 {
@@ -14,9 +15,8 @@ namespace DayTwoPuzzle.Tests.Interactors
             // Act
             var result = sut.Handle(input);
 
-            // Assert
-            Assert.Equal(result, expected);
-
+            // Assert 
+            Assert.Equal(expected, result);
         }
     }
 }
