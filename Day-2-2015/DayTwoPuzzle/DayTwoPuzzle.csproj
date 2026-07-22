@@ -11,4 +11,10 @@
     <Folder Include="Interactors\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DataSource\dimensions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
