@@ -2,7 +2,7 @@
 
 namespace DayTwoPuzzle.Converters
 {
-    public class StringToArrayConverter(IFileManager fileManager)
+    public class StringToArrayConverter(IFileManager fileManager) : IStringToArrayConverter
     {
         public int[,] ConvertStringTo2DArr(string filePath)
         {

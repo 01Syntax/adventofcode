@@ -2,6 +2,6 @@
 {
     public interface IStringToArrayConverter
     {
-        public int[,] ConvertStringTo2DArr();
+        int[,] ConvertStringTo2DArr(string filePath);
     }
 }
