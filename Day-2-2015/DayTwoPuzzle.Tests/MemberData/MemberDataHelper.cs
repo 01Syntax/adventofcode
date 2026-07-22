@@ -1,4 +1,4 @@
-﻿namespace DayTwoPuzzle.Tests.Helpers
+﻿namespace DayTwoPuzzle.Tests.MemberData
 {
     public class MemberDataHelper
     {

@@ -1,6 +1,6 @@
 ﻿using DayTwoPuzzle.Converters;
 using DayTwoPuzzle.Interfaces;
-using DayTwoPuzzle.Tests.Helpers;
+using DayTwoPuzzle.Tests.MemberData;
 using Moq;
 
 namespace DayTwoPuzzle.Tests.Converters
