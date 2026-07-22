@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../DayTwoPuzzle.Tests/DayTwoPuzzle.Tests.csproj" />
+  <Project Path="DayTwoPuzzle.csproj" />
+</Solution>
