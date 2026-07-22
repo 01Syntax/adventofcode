@@ -1,4 +1,5 @@
-﻿using DayTwoPuzzle.Interactors;
+using DayTwoPuzzle.Interactors;
+using DayTwoPuzzle.Models;
 using DayTwoPuzzle.Tests.MemberData;
 
 namespace DayTwoPuzzle.Tests.Interactors
@@ -7,15 +8,10 @@ namespace DayTwoPuzzle.Tests.Interactors
     {
         [Theory]
         [MemberData(nameof(DimensionsMemberData.TestData), MemberType = typeof(DimensionsMemberData))]
-        public void Handle_ReturnsSurfaceArea(int[,] input, int expected)
+        public void Handle_ReturnsTotalWrappingPaper(IEnumerable<Dimension> input, int expected)
         {
-            // Arrange
             var sut = new CalculateSurfaceAreaInteractor();
-
-            // Act
             var result = sut.Handle(input);
-
-            // Assert 
             Assert.Equal(expected, result);
         }
     }

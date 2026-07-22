@@ -1,8 +1,7 @@
-﻿using DayTwoPuzzle.Converters;
-using DayTwoPuzzle.Helpers;
 using DayTwoPuzzle.Interactors;
 using DayTwoPuzzle.Interfaces;
 using DayTwoPuzzle.Managers;
+using DayTwoPuzzle.Parsers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DayTwoPuzzle
@@ -11,19 +10,15 @@ namespace DayTwoPuzzle
     {
         static void Main(string[] args)
         {
-            var service = new ServiceCollection();
+            var services = new ServiceCollection();
 
-            service.AddTransient<App>();
-            service.AddTransient<IFileManager, FileManager>();
-            service.AddTransient<IArraySorter, ArraySorter>();
-            service.AddTransient<IStringToArrayConverter, StringToArrayConverter>();
-            service.AddTransient<ICalculateSurfaceAreaInteractor, CalculateSurfaceAreaInteractor>();
-            service.AddTransient<ICalculateAreaInteractor, CalculateAreaInteractor>();
+            services.AddTransient<App>();
+            services.AddTransient<IFileManager, FileManager>();
+            services.AddTransient<IDimensionParser, DimensionParser>();
+            services.AddTransient<ICalculateSurfaceAreaInteractor, CalculateSurfaceAreaInteractor>();
 
-            var serviceProvider = service.BuildServiceProvider();
-
-            var app = serviceProvider.GetRequiredService<App>();
-            app.Run();
+            var serviceProvider = services.BuildServiceProvider();
+            serviceProvider.GetRequiredService<App>().Run();
         }
     }
 }

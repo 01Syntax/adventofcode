@@ -1,29 +1,20 @@
-﻿using DayTwoPuzzle.Interfaces;
+using DayTwoPuzzle.Interfaces;
+using DayTwoPuzzle.Models;
 
 namespace DayTwoPuzzle.Interactors
 {
     public class CalculateSurfaceAreaInteractor : ICalculateSurfaceAreaInteractor
     {
-        public int Handle(int[,] dimensions)
+        public int Handle(IEnumerable<Dimension> dimensions)
         {
-            var surfaceArea = 0;
-            var rows = dimensions.GetLength(0);
-
-            for (var i = 0; i < rows; i++)
+            return dimensions.Sum(d =>
             {
-                var l = dimensions[i, 0];
-                var w = dimensions[i, 1];
-                var h = dimensions[i, 2];
-
-                var side1 = l * w;
-                var side2 = w * h;
-                var side3 = h * l;
-
-                surfaceArea += 2 * side1 + 2 * side2 + 2 * side3;
-            }
-
-            return surfaceArea;
-
+                var side1 = d.Length * d.Width;
+                var side2 = d.Width * d.Height;
+                var side3 = d.Height * d.Length;
+                var slack = Math.Min(side1, Math.Min(side2, side3));
+                return 2 * side1 + 2 * side2 + 2 * side3 + slack;
+            });
         }
     }
 }

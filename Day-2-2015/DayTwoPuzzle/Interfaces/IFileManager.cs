@@ -2,6 +2,6 @@
 {
     public interface IFileManager
     {
-        public string ReadFile(string filePath);
+        string ReadFile(string filePath);
     }
 }
