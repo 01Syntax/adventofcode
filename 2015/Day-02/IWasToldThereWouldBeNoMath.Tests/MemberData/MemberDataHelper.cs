@@ -1,6 +1,6 @@
-using DayTwoPuzzle.Models;
+using IWasToldThereWouldBeNoMath.Models;
 
-namespace DayTwoPuzzle.Tests.MemberData
+namespace IWasToldThereWouldBeNoMath.Tests.MemberData
 {
     public class MemberDataHelper
     {

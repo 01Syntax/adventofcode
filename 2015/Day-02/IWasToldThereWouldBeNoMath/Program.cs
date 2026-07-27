@@ -1,9 +1,9 @@
-using DayTwoPuzzle.Interactors;
-using DayTwoPuzzle.Managers;
-using DayTwoPuzzle.Parsers;
+using IWasToldThereWouldBeNoMath.Interactors;
+using IWasToldThereWouldBeNoMath.Managers;
+using IWasToldThereWouldBeNoMath.Parsers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DayTwoPuzzle
+namespace IWasToldThereWouldBeNoMath
 {
     internal class Program
     {

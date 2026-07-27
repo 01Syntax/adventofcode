@@ -1,4 +1,4 @@
-namespace DayTwoPuzzle.Managers
+namespace IWasToldThereWouldBeNoMath.Managers
 {
     public interface IFileManager
     {

@@ -1,6 +1,6 @@
-using DayTwoPuzzle.Models;
+using IWasToldThereWouldBeNoMath.Models;
 
-namespace DayTwoPuzzle.Parsers
+namespace IWasToldThereWouldBeNoMath.Parsers
 {
     public interface IDimensionParser
     {

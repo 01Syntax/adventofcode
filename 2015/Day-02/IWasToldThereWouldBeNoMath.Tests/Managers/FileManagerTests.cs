@@ -1,6 +1,6 @@
-﻿using DayTwoPuzzle.Managers;
+using IWasToldThereWouldBeNoMath.Managers;
 
-namespace DayTwoPuzzle.Tests.Managers
+namespace IWasToldThereWouldBeNoMath.Tests.Managers
 {
     public class FileManagerTests
     {

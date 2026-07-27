@@ -1,6 +1,6 @@
-using DayTwoPuzzle.Models;
+using IWasToldThereWouldBeNoMath.Models;
 
-namespace DayTwoPuzzle.Interactors
+namespace IWasToldThereWouldBeNoMath.Interactors
 {
     public interface ICalculateRibbonFeetInteractor
     {

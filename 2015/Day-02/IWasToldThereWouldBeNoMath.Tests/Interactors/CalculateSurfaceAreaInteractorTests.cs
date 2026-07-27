@@ -1,8 +1,8 @@
-using DayTwoPuzzle.Interactors;
-using DayTwoPuzzle.Models;
-using DayTwoPuzzle.Tests.MemberData;
+using IWasToldThereWouldBeNoMath.Interactors;
+using IWasToldThereWouldBeNoMath.Models;
+using IWasToldThereWouldBeNoMath.Tests.MemberData;
 
-namespace DayTwoPuzzle.Tests.Interactors
+namespace IWasToldThereWouldBeNoMath.Tests.Interactors
 {
     public class CalculateSurfaceAreaInteractorTests
     {

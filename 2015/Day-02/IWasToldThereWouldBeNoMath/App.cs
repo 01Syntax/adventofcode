@@ -1,8 +1,8 @@
-using DayTwoPuzzle.Interactors;
-using DayTwoPuzzle.Managers;
-using DayTwoPuzzle.Parsers;
+using IWasToldThereWouldBeNoMath.Interactors;
+using IWasToldThereWouldBeNoMath.Managers;
+using IWasToldThereWouldBeNoMath.Parsers;
 
-namespace DayTwoPuzzle
+namespace IWasToldThereWouldBeNoMath
 {
     public class App(IFileManager fileManager, IDimensionParser dimensionParser, ICalculateSurfaceAreaInteractor calculateSurfaceAreaInteractor, ICalculateRibbonFeetInteractor calculateRibbonFeetInteractor)
     {

@@ -1,8 +1,8 @@
-using DayTwoPuzzle.Models;
-using DayTwoPuzzle.Parsers;
-using DayTwoPuzzle.Tests.MemberData;
+using IWasToldThereWouldBeNoMath.Models;
+using IWasToldThereWouldBeNoMath.Parsers;
+using IWasToldThereWouldBeNoMath.Tests.MemberData;
 
-namespace DayTwoPuzzle.Tests.Parsers
+namespace IWasToldThereWouldBeNoMath.Tests.Parsers
 {
     public class DimensionParserTests
     {
