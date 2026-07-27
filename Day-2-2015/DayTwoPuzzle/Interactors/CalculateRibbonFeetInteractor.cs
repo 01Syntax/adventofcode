@@ -1,5 +1,4 @@
-﻿using DayTwoPuzzle.Interfaces;
-using DayTwoPuzzle.Models;
+﻿using DayTwoPuzzle.Models;
 
 namespace DayTwoPuzzle.Interactors
 {

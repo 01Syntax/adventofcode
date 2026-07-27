@@ -1,6 +1,6 @@
 using DayTwoPuzzle.Models;
 
-namespace DayTwoPuzzle.Interfaces
+namespace DayTwoPuzzle.Interactors
 {
     public interface ICalculateSurfaceAreaInteractor
     {

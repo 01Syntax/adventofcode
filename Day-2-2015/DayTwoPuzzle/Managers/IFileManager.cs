@@ -1,4 +1,4 @@
-﻿namespace DayTwoPuzzle.Interfaces
+namespace DayTwoPuzzle.Managers
 {
     public interface IFileManager
     {

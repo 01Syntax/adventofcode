@@ -1,5 +1,4 @@
 using DayTwoPuzzle.Interactors;
-using DayTwoPuzzle.Interfaces;
 using DayTwoPuzzle.Managers;
 using DayTwoPuzzle.Parsers;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +18,8 @@ namespace DayTwoPuzzle
             services.AddTransient<ICalculateRibbonFeetInteractor, CalculateRibbonFeetInteractor>();
 
             var serviceProvider = services.BuildServiceProvider();
-            serviceProvider.GetRequiredService<App>().Run();
+            var filePath = Path.Combine("DataSource", "dimensions.txt");
+            serviceProvider.GetRequiredService<App>().Run(filePath);
         }
     }
 }

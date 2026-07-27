@@ -1,6 +1,4 @@
-﻿using DayTwoPuzzle.Interfaces;
-
-namespace DayTwoPuzzle.Managers
+﻿namespace DayTwoPuzzle.Managers
 {
     public class FileManager : IFileManager
     {
