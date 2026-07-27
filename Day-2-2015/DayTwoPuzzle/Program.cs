@@ -16,6 +16,7 @@ namespace DayTwoPuzzle
             services.AddTransient<IFileManager, FileManager>();
             services.AddTransient<IDimensionParser, DimensionParser>();
             services.AddTransient<ICalculateSurfaceAreaInteractor, CalculateSurfaceAreaInteractor>();
+            services.AddTransient<ICalculateRibbonFeetInteractor, CalculateRibbonFeetInteractor>();
 
             var serviceProvider = services.BuildServiceProvider();
             serviceProvider.GetRequiredService<App>().Run();
