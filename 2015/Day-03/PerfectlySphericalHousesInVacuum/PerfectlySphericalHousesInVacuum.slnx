@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../PerfectlySphericalHousesInVacuum.Tests/PerfectlySphericalHousesInVacuum.Tests.csproj" Id="43da5144-8bba-4e8d-bbf6-999ee36e2ae3" />
+  <Project Path="PerfectlySphericalHousesInVacuum.csproj" />
+</Solution>
