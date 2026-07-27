@@ -12,8 +12,10 @@ namespace DayTwoPuzzle.Interactors
                 var side1 = x.Length;
                 var side2 = x.Width;
                 var side3 = x.Height;
-                var ribbon = 2 * side1 + 2 * side2;
-                var bow = side1 * side2 * side3;
+                var sides = new[] { side1, side2, side3 };
+                Array.Sort(sides);
+                var ribbon = 2 * sides[0] + 2 * sides[1];
+                var bow = sides[0] * sides[1] * sides[2];
                 return ribbon + bow;
             });
         }
