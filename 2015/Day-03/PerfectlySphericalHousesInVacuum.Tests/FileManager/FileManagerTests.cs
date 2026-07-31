@@ -1,4 +1,6 @@
-﻿namespace PerfectlySphericalHousesInVacuum.Tests.FileManager
+﻿using PerfectlySphericalHousesInVacuum.Models;
+
+namespace PerfectlySphericalHousesInVacuum.Tests.FileManager
 {
     public class FileManagerTests
     {
@@ -13,7 +15,32 @@
             var content = sut.ReadFile(filePath);
 
             // Assert
-            Assert.Equivalent("^v^v^v^v^v", content);
+            Assert.Equivalent(
+                new[]
+                {
+                    Direction.North,
+                    Direction.South,
+                    Direction.North,
+                    Direction.South,
+                    Direction.North,
+                    Direction.South,
+                    Direction.North,
+                    Direction.South,
+                    Direction.North,
+                    Direction.South
+                }, content);
+        }
+
+
+        [Fact]
+        public void ReadFile_ThrowAnException()
+        {
+            // Arrange
+            var sut = new PerfectlySphericalHousesInVacuum.FileManager.FileManager();
+            var filePath = Path.Combine("MockData", "nonexistent.txt");
+
+            // Act & Assert
+            Assert.Throws<FileNotFoundException>(() => sut.ReadFile(filePath));
         }
     }
 }

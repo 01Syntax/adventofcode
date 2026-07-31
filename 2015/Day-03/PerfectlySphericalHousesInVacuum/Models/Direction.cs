@@ -1,6 +1,6 @@
 ﻿namespace PerfectlySphericalHousesInVacuum.Models
 {
-    public enum Pole
+    public enum Direction
     {
         North,
         South,
