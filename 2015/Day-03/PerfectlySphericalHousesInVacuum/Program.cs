@@ -15,6 +15,7 @@ namespace PerfectlySphericalHousesInVacuum
             services.AddTransient<IFileManager, FileManager.FileManager>();
             services.AddTransient<IGetTotalHouseInteractor, GetTotalHouseInteractor>();
             services.AddTransient<IDirectionMapper, DirectionMapper>();
+            services.AddTransient<IPartTwoGetTotalHouseInteractor, PartTwoGetTotalHouseInteractor>();
 
             var serviceProvider = services.BuildServiceProvider();
             var filePath = Path.Combine("DataSource", "directions.txt");
