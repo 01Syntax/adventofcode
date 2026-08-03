@@ -6,29 +6,41 @@ namespace PerfectlySphericalHousesInVacuum.Interactors
     {
         public int GetTotalDeliveries(List<Direction> directions)
         {
-            var numberOfDeliveriesToHouses = 0;
-
-            for (int i = 0; i < directions.Count; i++)
+            Dictionary<(int x, int y), int> visitedHouses = new()
             {
-                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Down || directions[i] == Direction.Right && directions[i + 1] == Direction.Left || directions[i] == Direction.Down && directions[i + 1] == Direction.Up || directions[i] == Direction.Left && directions[i + 1] == Direction.Right)
+                {(0, 0) , 1}
+            };
+
+            var currentPosition = (x: 0, y: 0);
+            foreach (var direction in directions)
+            {
+                switch (direction)
                 {
-                    numberOfDeliveriesToHouses++;
-                    break;
+                    case Direction.Up:
+                        currentPosition = (currentPosition.x, currentPosition.y + 1);
+                        break;
+                    case Direction.Down:
+                        currentPosition = (currentPosition.x, currentPosition.y - 1);
+                        break;
+                    case Direction.Right:
+                        currentPosition = (currentPosition.x + 1, currentPosition.y);
+                        break;
+                    case Direction.Left:
+                        currentPosition = (currentPosition.x - 1, currentPosition.y);
+                        break;
                 }
 
-                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Right || directions[i] == Direction.Down && directions[i + 1] == Direction.Left)
+                if (visitedHouses.TryGetValue(currentPosition, out var count))
                 {
-                    numberOfDeliveriesToHouses++;
-                    break;
+                    visitedHouses[currentPosition] = count + 1;
                 }
-
-                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Down && directions[i + 2] == Direction.Up && directions[i + 3] == Direction.Down)
+                else
                 {
-                    numberOfDeliveriesToHouses = 2;
-                    break;
+                    visitedHouses[currentPosition] = 1;
                 }
             }
-            return numberOfDeliveriesToHouses;
+
+            return visitedHouses.Count(kvp => kvp.Value > 1);
         }
     }
 }
