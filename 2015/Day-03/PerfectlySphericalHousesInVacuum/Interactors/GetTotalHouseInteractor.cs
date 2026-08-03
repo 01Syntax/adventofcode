@@ -1,8 +1,9 @@
-﻿using PerfectlySphericalHousesInVacuum.Models;
+﻿using PerfectlySphericalHousesInVacuum.Interfaces;
+using PerfectlySphericalHousesInVacuum.Models;
 
 namespace PerfectlySphericalHousesInVacuum.Interactors
 {
-    public class GetTotalHouseInteractor
+    public class GetTotalHouseInteractor : IGetTotalHouseInteractor
     {
         public int GetTotalDeliveries(List<Direction> directions)
         {
