@@ -8,15 +8,15 @@ namespace PerfectlySphericalHousesInVacuum.Tests.MemberData
         [
             [
                 new List<Direction> { Direction.Up, Direction.Down },
-                1
+                2
             ],
             [
                 new List<Direction> { Direction.Right, Direction.Left },
-                1
+                2
             ],
             [
                 new List<Direction> { Direction.Up, Direction.Right , Direction.Down , Direction.Left },
-                1
+                4
             ],
             [
                 new List<Direction>

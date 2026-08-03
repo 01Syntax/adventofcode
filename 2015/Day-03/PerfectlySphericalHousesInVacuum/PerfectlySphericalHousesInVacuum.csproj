@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
   </ItemGroup>
 
+	<ItemGroup>
+		<None Update="DataSource\directions.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 </Project>

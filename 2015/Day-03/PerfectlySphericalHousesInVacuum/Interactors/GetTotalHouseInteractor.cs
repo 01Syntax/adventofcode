@@ -41,7 +41,7 @@ namespace PerfectlySphericalHousesInVacuum.Interactors
                 }
             }
 
-            return visitedHouses.Count(kvp => kvp.Value > 1);
+            return visitedHouses.Count;
         }
     }
 }
