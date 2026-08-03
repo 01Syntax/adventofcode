@@ -10,19 +10,19 @@ namespace PerfectlySphericalHousesInVacuum.Interactors
 
             for (int i = 0; i < directions.Count; i++)
             {
-                if (directions[i] == Direction.North && directions[i + 1] == Direction.South || directions[i] == Direction.East && directions[i + 1] == Direction.West || directions[i] == Direction.South && directions[i + 1] == Direction.North || directions[i] == Direction.West && directions[i + 1] == Direction.East)
+                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Down || directions[i] == Direction.Right && directions[i + 1] == Direction.Left || directions[i] == Direction.Down && directions[i + 1] == Direction.Up || directions[i] == Direction.Left && directions[i + 1] == Direction.Right)
                 {
                     numberOfDeliveriesToHouses++;
                     break;
                 }
 
-                if (directions[i] == Direction.North && directions[i + 1] == Direction.East || directions[i] == Direction.South && directions[i + 1] == Direction.West)
+                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Right || directions[i] == Direction.Down && directions[i + 1] == Direction.Left)
                 {
                     numberOfDeliveriesToHouses++;
                     break;
                 }
 
-                if (directions[i] == Direction.North && directions[i + 1] == Direction.South && directions[i + 2] == Direction.North && directions[i + 3] == Direction.South)
+                if (directions[i] == Direction.Up && directions[i + 1] == Direction.Down && directions[i + 2] == Direction.Up && directions[i + 3] == Direction.Down)
                 {
                     numberOfDeliveriesToHouses = 2;
                     break;

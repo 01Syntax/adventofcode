@@ -7,30 +7,30 @@ namespace PerfectlySphericalHousesInVacuum.Tests.MemberData
         public static IEnumerable<object[]> TestData() =>
         [
             [
-                new List<Direction> { Direction.North, Direction.South },
+                new List<Direction> { Direction.Up, Direction.Down },
                 1
             ],
             [
-                new List<Direction> { Direction.East, Direction.West },
+                new List<Direction> { Direction.Right, Direction.Left },
                 1
             ],
             [
-                new List<Direction> { Direction.North, Direction.East , Direction.South , Direction.West },
+                new List<Direction> { Direction.Up, Direction.Right , Direction.Down , Direction.Left },
                 1
             ],
             [
                 new List<Direction>
                 {
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down
                 },
                 2
             ],

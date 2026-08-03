@@ -18,16 +18,16 @@ namespace PerfectlySphericalHousesInVacuum.Tests.FileManager
             Assert.Equivalent(
                 new[]
                 {
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South,
-                    Direction.North,
-                    Direction.South
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down,
+                    Direction.Up,
+                    Direction.Down
                 }, content);
         }
 

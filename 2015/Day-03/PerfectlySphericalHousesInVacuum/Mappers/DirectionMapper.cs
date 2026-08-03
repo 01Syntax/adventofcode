@@ -8,10 +8,10 @@ namespace PerfectlySphericalHousesInVacuum.Mappers
         {
             return direction switch
             {
-                '^' => Direction.North,
-                'v' => Direction.South,
-                '<' => Direction.West,
-                '>' => Direction.East,
+                '^' => Direction.Up,
+                'v' => Direction.Down,
+                '<' => Direction.Left,
+                '>' => Direction.Right,
                 _ => throw new ArgumentException("Invalid direction")
             };
         }

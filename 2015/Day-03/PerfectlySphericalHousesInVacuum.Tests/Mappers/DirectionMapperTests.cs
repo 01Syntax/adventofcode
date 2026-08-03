@@ -6,10 +6,10 @@ namespace PerfectlySphericalHousesInVacuum.Tests.Mappers
     public class DirectionMapperTests
     {
         [Theory]
-        [InlineData('^', Direction.North)]
-        [InlineData('v', Direction.South)]
-        [InlineData('<', Direction.West)]
-        [InlineData('>', Direction.East)]
+        [InlineData('^', Direction.Up)]
+        [InlineData('v', Direction.Down)]
+        [InlineData('<', Direction.Left)]
+        [InlineData('>', Direction.Right)]
         public void MapToDirection_ReturnsCorrectDirection(char input, Direction expected)
         {
             // Arrange
