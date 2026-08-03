@@ -1,14 +1,19 @@
-﻿using PerfectlySphericalHousesInVacuum.Models;
+﻿using Moq;
+using PerfectlySphericalHousesInVacuum.Interfaces;
+using PerfectlySphericalHousesInVacuum.Models;
 
 namespace PerfectlySphericalHousesInVacuum.Tests.FileManager
 {
     public class FileManagerTests
     {
-        [Fact]
-        public void ReadFile_ReturnFileContent()
+        [Theory]
+        [InlineData('v', Direction.Down)]
+        public void ReadFile_ReturnFileContent(char input, Direction expected)
         {
             // Arrange
-            var sut = new PerfectlySphericalHousesInVacuum.FileManager.FileManager();
+            var directionMapper = new Mock<IDirectionMapper>();
+            directionMapper.Setup(x => x.MapToDirection(input)).Returns(expected);
+            var sut = new PerfectlySphericalHousesInVacuum.FileManager.FileManager(directionMapper.Object);
             var filePath = Path.Combine("MockData", "test.txt");
 
             // Act
@@ -36,7 +41,8 @@ namespace PerfectlySphericalHousesInVacuum.Tests.FileManager
         public void ReadFile_ThrowAnException()
         {
             // Arrange
-            var sut = new PerfectlySphericalHousesInVacuum.FileManager.FileManager();
+            var directionMapper = new Mock<IDirectionMapper>();
+            var sut = new PerfectlySphericalHousesInVacuum.FileManager.FileManager(directionMapper.Object);
             var filePath = Path.Combine("MockData", "nonexistent.txt");
 
             // Act & Assert

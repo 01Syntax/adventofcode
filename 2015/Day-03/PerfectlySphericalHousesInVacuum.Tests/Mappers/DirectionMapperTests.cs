@@ -21,5 +21,15 @@ namespace PerfectlySphericalHousesInVacuum.Tests.Mappers
             // Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void MapToDirection_ThrowsAnException()
+        {
+            // Arrange
+            var sut = new DirectionMapper();
+
+            // Act & Assert
+            Assert.Throws<ArgumentException>(() => sut.MapToDirection('X'));
+        }
     }
 }
