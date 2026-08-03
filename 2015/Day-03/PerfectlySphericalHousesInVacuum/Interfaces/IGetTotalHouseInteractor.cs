@@ -4,5 +4,5 @@ namespace PerfectlySphericalHousesInVacuum.Interfaces;
 
 public interface IGetTotalHouseInteractor
 {
-    int GetTotalDeliveries(List<Direction> directions);
+    int Handle(List<Direction> directions);
 }

@@ -4,15 +4,15 @@ using PerfectlySphericalHousesInVacuum.Tests.MemberData;
 
 namespace PerfectlySphericalHousesInVacuum.Tests.Interactors
 {
-    public class GetTotalHouseInteractorTests
+    public class PartTwoGetTotalHouseInteractorTests
     {
         [Theory]
-        [MemberData(nameof(DirectionMemberData.TestData), MemberType = typeof(DirectionMemberData))]
+        [MemberData(nameof(PartTwoDirectionMemberData.TestData), MemberType = typeof(PartTwoDirectionMemberData))]
         public void GetTotalHouses_WhenCalledWithValidInput_ReturnsCorrectTotalHouses(List<Direction> directions,
             int expectedTotalHouses)
         {
             // Arrange
-            var interactor = new GetTotalHouseInteractor();
+            var interactor = new PartTwoGetTotalHouseInteractor();
 
             // Act
             var actualTotalHouses = interactor.Handle(directions);

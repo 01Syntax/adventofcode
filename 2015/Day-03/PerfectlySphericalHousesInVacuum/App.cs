@@ -7,7 +7,7 @@ namespace PerfectlySphericalHousesInVacuum
         public void Run(string filePath)
         {
             var directions = fileManager.ReadFile(filePath);
-            var totalDeliveries = getTotalHouseInteractor.GetTotalDeliveries(directions);
+            var totalDeliveries = getTotalHouseInteractor.Handle(directions);
             Console.WriteLine($"Total houses that received at least one delivery: {totalDeliveries}");
         }
     }

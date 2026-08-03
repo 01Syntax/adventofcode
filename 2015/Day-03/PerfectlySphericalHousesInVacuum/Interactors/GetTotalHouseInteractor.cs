@@ -5,7 +5,7 @@ namespace PerfectlySphericalHousesInVacuum.Interactors
 {
     public class GetTotalHouseInteractor : IGetTotalHouseInteractor
     {
-        public int GetTotalDeliveries(List<Direction> directions)
+        public int Handle(List<Direction> directions)
         {
             Dictionary<(int x, int y), int> visitedHouses = new()
             {
