@@ -1,8 +1,9 @@
-﻿using PerfectlySphericalHousesInVacuum.Models;
+﻿using PerfectlySphericalHousesInVacuum.Interfaces;
+using PerfectlySphericalHousesInVacuum.Models;
 
 namespace PerfectlySphericalHousesInVacuum.Mappers
 {
-    public class DirectionMapper
+    public class DirectionMapper : IDirectionMapper
     {
         public Direction MapToDirection(char direction)
         {
