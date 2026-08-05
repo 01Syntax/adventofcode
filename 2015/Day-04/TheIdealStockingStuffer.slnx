@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TheIdealStockingStuffer.Tests/TheIdealStockingStuffer.Tests.csproj" Id="d5ceffab-89ad-464b-adcf-d8c4f5b08391" />
+  <Project Path="TheIdealStockingStuffer/TheIdealStockingStuffer.csproj" Id="9812e5d1-caad-47af-8ec6-f86029edab1a" />
+</Solution>
