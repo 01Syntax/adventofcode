@@ -2,5 +2,5 @@
 
 public interface IGetNiceStringsHelper
 {
-    List<string> GetNiceStrings(List<string> dataList);
+    Task<List<string>> GetNiceStrings(List<string> dataList);
 }

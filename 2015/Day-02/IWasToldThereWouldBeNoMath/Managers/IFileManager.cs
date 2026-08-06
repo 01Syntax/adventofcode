@@ -2,6 +2,6 @@ namespace IWasToldThereWouldBeNoMath.Managers
 {
     public interface IFileManager
     {
-        List<string> ReadFile(string filePath);
+        Task<List<string>> ReadFile(string filePath);
     }
 }

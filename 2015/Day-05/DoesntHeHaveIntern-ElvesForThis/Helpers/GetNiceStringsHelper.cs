@@ -4,7 +4,7 @@ namespace DoesntHeHaveIntern_ElvesForThis.Helpers
 {
     public class GetNiceStringsHelper : IGetNiceStringsHelper
     {
-        public List<string> GetNiceStrings(List<string> dataList)
+        public async Task<List<string>> GetNiceStrings(List<string> dataList)
         {
             var niceStrings = new List<string>();
             var vowels = new[] { 'a', 'e', 'i', 'o', 'u' };

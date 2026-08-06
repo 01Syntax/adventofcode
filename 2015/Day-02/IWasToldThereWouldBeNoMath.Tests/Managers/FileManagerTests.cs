@@ -5,14 +5,14 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
     public class FileManagerTests
     {
         [Fact]
-        public void ReadFile_ReturnTheFileContent()
+        public async Task ReadFile_ReturnTheFileContent()
         {
             // Arrange
             var sut = new FileManager();
             var filePath = Path.Combine("DataSource", "test.txt");
 
             // act
-            var content = sut.ReadFile(filePath);
+            var content = await sut.ReadFile(filePath);
 
             // Assert
             Assert.Equivalent(content, new List<string>
@@ -25,7 +25,7 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
         }
 
         [Fact]
-        public void ReadFile_ThrowsAnExceptionWhenFileNotExists()
+        public async Task ReadFile_ThrowsAnExceptionWhenFileNotExists()
         {
             // Arrange
             var sut = new FileManager();
@@ -33,7 +33,7 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
 
 
             // Act & Assert
-            Assert.Throws<FileNotFoundException>(() => sut.ReadFile(filePath));
+            await Assert.ThrowsAsync<FileNotFoundException>(async () => await sut.ReadFile(filePath));
         }
     }
 }

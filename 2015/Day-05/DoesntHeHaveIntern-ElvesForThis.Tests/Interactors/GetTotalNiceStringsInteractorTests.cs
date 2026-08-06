@@ -7,13 +7,13 @@ namespace DoesntHeHaveIntern_ElvesForThis.Tests.Interactors
     {
         [Theory]
         [MemberData(nameof(NiceStringsData.TestData), MemberType = typeof(NiceStringsData))]
-        public void Handle_ReturnsCorrectCount(List<string> input, int expected)
+        public async Task Handle_ReturnsCorrectCount(List<string> input, int expected)
         {
             // Arrange
             var sut = new GetTotalNiceStringsInteractor();
 
             // Act
-            var result = sut.Handle(input);
+            var result = await sut.Handle(input);
 
             // Assert
             Assert.Equal(expected, result);

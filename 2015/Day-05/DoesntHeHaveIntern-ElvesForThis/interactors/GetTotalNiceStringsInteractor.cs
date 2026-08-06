@@ -1,10 +1,12 @@
-﻿namespace DoesntHeHaveIntern_ElvesForThis.interactors
+﻿using DoesntHeHaveIntern_ElvesForThis.Interfaces;
+
+namespace DoesntHeHaveIntern_ElvesForThis.interactors
 {
-    public class GetTotalNiceStringsInteractor
+    public class GetTotalNiceStringsInteractor : IGetTotalNiceStringsInteractor
     {
-        public int Handle(List<String> niceStrings)
+        public async Task<int> Handle(List<string> niceStrings)
         {
-            return niceStrings.Count;
+            return await Task.FromResult(niceStrings.Count);
         }
     }
 }
