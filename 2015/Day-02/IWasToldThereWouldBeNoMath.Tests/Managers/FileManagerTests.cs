@@ -9,13 +9,13 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
         {
             // Arrange
             var sut = new FileManager();
-            var filePath = Path.Combine("MockData", "dimensions.txt");
+            var filePath = Path.Combine("DataSource", "test.txt");
 
             // act
             var content = sut.ReadFile(filePath);
 
             // Assert
-            Assert.Equivalent(content, "29x13x26\r\n11x11x14\r\n27x2x5");
+            Assert.Equivalent(content, "zgsnvdmlfuplrubt\r\nvlhagaovgqjmgvwq\r\nffumlmqwfcsyqpss\r\nzztdcqzqddaazdjp");
         }
 
         [Fact]
@@ -23,7 +23,7 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
         {
             // Arrange
             var sut = new FileManager();
-            var filePath = Path.Combine("MockData", "notExists.txt");
+            var filePath = Path.Combine("DataSource", "notExists.txt");
 
 
             // Act & Assert
