@@ -3,7 +3,7 @@ using TheIdealStockingStuffer.Interfaces;
 
 namespace TheIdealStockingStuffer.Helpers
 {
-    public class GenerateHashHelper(IMdManager mdManager)
+    public class GenerateHashHelper(IMdManager mdManager) : IGenerateHashHelper
     {
         public string GenerateHash(string input)
         {
