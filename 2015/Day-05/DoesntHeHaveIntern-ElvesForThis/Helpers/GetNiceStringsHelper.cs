@@ -1,15 +1,40 @@
-﻿namespace DoesntHeHaveIntern_ElvesForThis.Helpers
+﻿using DoesntHeHaveIntern_ElvesForThis.Interfaces;
+
+namespace DoesntHeHaveIntern_ElvesForThis.Helpers
 {
-    public class GetNiceStringsHelper
+    public class GetNiceStringsHelper : IGetNiceStringsHelper
     {
-        public List<string> GetNiceStrings(List<string> input)
+        public List<string> GetNiceStrings(List<string> dataList)
         {
             var niceStrings = new List<string>();
-            for (int i = 0; i < input.Count; i++)
+            var vowels = new[] { 'a', 'e', 'i', 'o', 'u' };
+            var forbiddenStrings = new[] { "ab", "cd", "pq", "xy" };
+
+            return dataList.Where(input => HasEnoughVowels(input, vowels)
+                                           && !ContainsForbiddenString(input, forbiddenStrings) &&
+                                           HasDoubleLetter(input)).ToList();
+        }
+
+        private bool HasEnoughVowels(string input, char[] vowels)
+        {
+            return input.Count(c => vowels.Contains(c)) >= 3;
+        }
+
+        private bool ContainsForbiddenString(string input, string[] forbiddenStrings)
+        {
+            return forbiddenStrings.Any(input.Contains);
+        }
+
+        private bool HasDoubleLetter(string input)
+        {
+            for (int i = 0; i < input.Length - 1; i++)
             {
-                // Implementation for getting nice strings
+                if (input[i] == input[i + 1])
+                {
+                    return true;
+                }
             }
-            return niceStrings;
+            return false;
         }
     }
 }
