@@ -5,7 +5,7 @@ namespace TheIdealStockingStuffer.Helpers
 {
     public class MdManager : IMdManager
     {
-        public MD5 CreateHash(string input)
+        public MD5 CreateHash()
         {
             return MD5.Create();
         }

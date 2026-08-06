@@ -5,12 +5,12 @@ namespace TheIdealStockingStuffer.Helpers
 {
     public class GenerateHashHelper(IMdManager mdManager)
     {
-        public static string GenerateHash(string input)
+        public string GenerateHash(string input)
         {
             byte[] inputBytes = Encoding.UTF8.GetBytes(input);
-            byte[] hashBytes = mdManager.CreateHash(input).ComputeHash(inputBytes);
+            byte[] hashBytes = mdManager.CreateHash().ComputeHash(inputBytes);
 
-            string hash = Convert.ToHexString(hashBytes).ToLower();
+            return Convert.ToHexString(hashBytes).ToLower();
         }
     }
 }
