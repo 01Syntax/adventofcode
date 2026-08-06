@@ -15,7 +15,13 @@ namespace IWasToldThereWouldBeNoMath.Tests.Managers
             var content = sut.ReadFile(filePath);
 
             // Assert
-            Assert.Equivalent(content, "zgsnvdmlfuplrubt\r\nvlhagaovgqjmgvwq\r\nffumlmqwfcsyqpss\r\nzztdcqzqddaazdjp");
+            Assert.Equivalent(content, new List<string>
+            {
+                "zgsnvdmlfuplrubt",
+                "vlhagaovgqjmgvwq",
+                "ffumlmqwfcsyqpss",
+                "zztdcqzqddaazdjp"
+            });
         }
 
         [Fact]

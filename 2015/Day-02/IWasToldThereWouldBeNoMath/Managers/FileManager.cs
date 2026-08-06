@@ -2,12 +2,12 @@ namespace IWasToldThereWouldBeNoMath.Managers
 {
     public class FileManager : IFileManager
     {
-        public string ReadFile(string filePath)
+        public List<string> ReadFile(string filePath)
         {
             if (!File.Exists(filePath))
                 throw new FileNotFoundException($"File not found at path: {filePath}");
 
-            return File.ReadAllText(filePath);
+            return File.ReadAllLines(filePath).ToList();
         }
     }
 }

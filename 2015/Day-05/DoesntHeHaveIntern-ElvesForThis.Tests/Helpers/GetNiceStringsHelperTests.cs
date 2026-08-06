@@ -1,4 +1,6 @@
-﻿namespace DoesntHeHaveIntern_ElvesForThis.Tests.Helpers
+﻿using DoesntHeHaveIntern_ElvesForThis.Helpers;
+
+namespace DoesntHeHaveIntern_ElvesForThis.Tests.Helpers
 {
     public class GetNiceStringsHelperTests
     {
