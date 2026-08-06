@@ -9,21 +9,23 @@ namespace TheIdealStockingStuffer.Tests.Helpers
     {
         [Theory]
         [InlineData("some_test_string", "83c88c7550d4cd0364b9135343060320")]
-        [InlineData("", "d41d8cd98f00b204e9800998ecf8427e")]
         public void GenerateHash_ValidInput_ReturnsHash(string input, string expectedHash)
         {
             // Arrange
+            const string expectedSuffix = "83c88";
             var mock = new Mock<IMdManager>();
             mock.Setup(x => x.CreateHash()).Returns(MD5.Create());
             var sut = new GenerateHashHelper(mock.Object);
 
             // Act
             var actualHash = sut.GenerateHash(input);
+            var actualSuffix = actualHash.Substring(0, 5);
 
             // Assert
             Assert.NotNull(actualHash);
             Assert.Equal(expectedHash, actualHash);
             Assert.Equal(32, actualHash.Length);
+            Assert.Equal(expectedSuffix, actualSuffix);
         }
 
         [Theory]
@@ -31,12 +33,15 @@ namespace TheIdealStockingStuffer.Tests.Helpers
         public void GenerateHash_EmptyInput_ReturnsHash(string input, string expectedHash)
         {
             // Arrange
+            const string expectedSuffix = "d41d8";
             var mock = new Mock<IMdManager>();
             mock.Setup(x => x.CreateHash()).Returns(MD5.Create());
             var sut = new GenerateHashHelper(mock.Object);
 
             // Act
             var actualHash = sut.GenerateHash(input);
+            var actualSuffix = actualHash.Substring(0, 5);
+            Assert.NotNull(actualHash);
 
             // Assert
             Assert.NotNull(actualHash);
