@@ -15,6 +15,8 @@ namespace DoesntHeHaveIntern_ElvesForThis
             services.AddTransient<IGetNiceStringsHelper, GetNiceStringsHelper>();
             services.AddTransient<IGetTotalNiceStringsInteractor, GetTotalNiceStringsInteractor>();
             services.AddTransient<IFileManager, FileManager>();
+            services.AddTransient<IGetTotalNiceStringsPartTwoInteractor, GetTotalNiceStringsPartTwoInteractor>();
+            services.AddTransient<IGetNiceStringsHelperPartTwo, GetNiceStringsHelperPartTwo>();
             services.AddTransient<App>();
 
             var serviceProvider = services.BuildServiceProvider();

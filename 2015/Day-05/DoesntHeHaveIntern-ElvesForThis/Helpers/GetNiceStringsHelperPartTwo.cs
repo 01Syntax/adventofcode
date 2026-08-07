@@ -1,6 +1,8 @@
-﻿namespace DoesntHeHaveIntern_ElvesForThis.Helpers
+﻿using DoesntHeHaveIntern_ElvesForThis.Interfaces;
+
+namespace DoesntHeHaveIntern_ElvesForThis.Helpers
 {
-    public class GetNiceStringsHelperPartTwo
+    public class GetNiceStringsHelperPartTwo : IGetNiceStringsHelperPartTwo
     {
         public async Task<List<string>> GetNiceStrings(List<string> input)
         {
