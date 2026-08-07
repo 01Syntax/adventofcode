@@ -1,5 +1,5 @@
+using AoC.Shared;
 using IWasToldThereWouldBeNoMath.Interactors;
-using IWasToldThereWouldBeNoMath.Managers;
 using IWasToldThereWouldBeNoMath.Parsers;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,7 +12,7 @@ namespace IWasToldThereWouldBeNoMath
             var services = new ServiceCollection();
 
             services.AddTransient<App>();
-            services.AddTransient<IFileManager, FileManager>();
+            services.AddTransient<IFileReader, FileReader>();
             services.AddTransient<IDimensionParser, DimensionParser>();
             services.AddTransient<ICalculateSurfaceAreaInteractor, CalculateSurfaceAreaInteractor>();
             services.AddTransient<ICalculateRibbonFeetInteractor, CalculateRibbonFeetInteractor>();

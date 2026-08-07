@@ -1,13 +1,13 @@
-﻿using DoesntHeHaveIntern_ElvesForThis.Interfaces;
-using IWasToldThereWouldBeNoMath.Managers;
+using AoC.Shared;
+using DoesntHeHaveIntern_ElvesForThis.Interfaces;
 
 namespace DoesntHeHaveIntern_ElvesForThis
 {
-    public class App(IGetNiceStringsHelper getNiceStringsHelper, IGetTotalNiceStringsInteractor getTotalNiceStringsInteractor, IFileManager fileManager, IGetTotalNiceStringsPartTwoInteractor getTotalNiceStringsPartTwoInteractor, IGetNiceStringsHelperPartTwo getNiceStringsHelperPartTwo)
+    public class App(IGetNiceStringsHelper getNiceStringsHelper, IGetTotalNiceStringsInteractor getTotalNiceStringsInteractor, IFileReader fileReader, IGetTotalNiceStringsPartTwoInteractor getTotalNiceStringsPartTwoInteractor, IGetNiceStringsHelperPartTwo getNiceStringsHelperPartTwo)
     {
         public async Task Run()
         {
-            var dataList = await fileManager.ReadFile("DataSource/data.txt");
+            var dataList = fileReader.ReadAsLines("DataSource/data.txt").ToList();
             var niceStrings = await getNiceStringsHelper.GetNiceStrings(dataList);
             var totalNiceStrings = await getTotalNiceStringsInteractor.Handle(niceStrings);
             var niceStringsPartTwo = await getNiceStringsHelperPartTwo.GetNiceStrings(dataList);

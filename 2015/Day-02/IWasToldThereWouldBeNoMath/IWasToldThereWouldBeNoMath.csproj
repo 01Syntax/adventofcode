@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\AoC.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="DataSource\dimensions.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

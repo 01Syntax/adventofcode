@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="../NotQuiteLisp.Tests/NotQuiteLisp.Tests.csproj" />
   <Project Path="NotQuiteLisp.csproj" />
+  <Project Path="../../Shared/AoC.Shared.csproj" />
 </Solution>

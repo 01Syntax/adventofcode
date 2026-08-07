@@ -1,6 +1,6 @@
-﻿using Moq;
+using AoC.Shared;
+using Moq;
 using NotQuiteLisp.Interactors;
-using NotQuiteLisp.Interfaces;
 
 namespace NotQuiteLisp.Tests.Interactors
 {
@@ -12,17 +12,13 @@ namespace NotQuiteLisp.Tests.Interactors
         [InlineData("())", 3)]
         public void Handle_ReturnsPositionOfTheCharacterThatCausesSantaToFirstEnterTheBasement(string data, int expectedPosition)
         {
-            // Arrange
-            var fileManagerMock = new Mock<IFileManager>();
-            fileManagerMock.Setup(x => x.ReadFile(It.IsAny<string>())).Returns(data);
-            var sut = new GetPositionOfCharacterInteractor(fileManagerMock.Object);
+            var fileReaderMock = new Mock<IFileReader>();
+            fileReaderMock.Setup(x => x.ReadAsString(It.IsAny<string>())).Returns(data);
+            var sut = new GetPositionOfCharacterInteractor(fileReaderMock.Object);
 
-            // Act
             var result = sut.Handle("ignore.txt");
 
-            // Assert
             Assert.Equal(expectedPosition, result);
-
         }
     }
 }

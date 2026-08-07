@@ -1,7 +1,7 @@
-﻿using DoesntHeHaveIntern_ElvesForThis.Helpers;
+using AoC.Shared;
+using DoesntHeHaveIntern_ElvesForThis.Helpers;
 using DoesntHeHaveIntern_ElvesForThis.interactors;
 using DoesntHeHaveIntern_ElvesForThis.Interfaces;
-using IWasToldThereWouldBeNoMath.Managers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DoesntHeHaveIntern_ElvesForThis
@@ -14,7 +14,7 @@ namespace DoesntHeHaveIntern_ElvesForThis
 
             services.AddTransient<IGetNiceStringsHelper, GetNiceStringsHelper>();
             services.AddTransient<IGetTotalNiceStringsInteractor, GetTotalNiceStringsInteractor>();
-            services.AddTransient<IFileManager, FileManager>();
+            services.AddTransient<IFileReader, FileReader>();
             services.AddTransient<IGetTotalNiceStringsPartTwoInteractor, GetTotalNiceStringsPartTwoInteractor>();
             services.AddTransient<IGetNiceStringsHelperPartTwo, GetNiceStringsHelperPartTwo>();
             services.AddTransient<App>();
