@@ -1,14 +1,14 @@
+using AoC.Shared;
 using IWasToldThereWouldBeNoMath.Interactors;
-using IWasToldThereWouldBeNoMath.Managers;
 using IWasToldThereWouldBeNoMath.Parsers;
 
 namespace IWasToldThereWouldBeNoMath
 {
-    public class App(IFileManager fileManager, IDimensionParser dimensionParser, ICalculateSurfaceAreaInteractor calculateSurfaceAreaInteractor, ICalculateRibbonFeetInteractor calculateRibbonFeetInteractor)
+    public class App(IFileReader fileReader, IDimensionParser dimensionParser, ICalculateSurfaceAreaInteractor calculateSurfaceAreaInteractor, ICalculateRibbonFeetInteractor calculateRibbonFeetInteractor)
     {
         public void Run(string filePath)
         {
-            var content = fileManager.ReadFile(filePath);
+            var content = fileReader.ReadAsString(filePath);
             var dimensions = dimensionParser.Parse(content);
             var totalWrappingPaper = calculateSurfaceAreaInteractor.Handle(dimensions);
             var totalRibbon = calculateRibbonFeetInteractor.Handle(dimensions);

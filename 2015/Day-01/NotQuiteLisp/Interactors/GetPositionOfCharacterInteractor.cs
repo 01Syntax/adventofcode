@@ -1,12 +1,13 @@
-﻿using NotQuiteLisp.Interfaces;
+using AoC.Shared;
+using NotQuiteLisp.Interfaces;
 
 namespace NotQuiteLisp.Interactors
 {
-    public class GetPositionOfCharacterInteractor(IFileManager fileManager) : IGetPositionOfCharacterInteractor
+    public class GetPositionOfCharacterInteractor(IFileReader fileReader) : IGetPositionOfCharacterInteractor
     {
         public int Handle(string filePath)
         {
-            var data = fileManager.ReadFile(filePath);
+            var data = fileReader.ReadAsString(filePath);
             var position = 0;
 
             for (int i = 0; i < data.Length; i++)

@@ -1,12 +1,13 @@
-﻿using NotQuiteLisp.Interfaces;
+using AoC.Shared;
+using NotQuiteLisp.Interfaces;
 
 namespace NotQuiteLisp.Interactors
 {
-    public class GetFloorsInteractor(IFileManager fileManager) : IGetFloorsInteractor
+    public class GetFloorsInteractor(IFileReader fileReader) : IGetFloorsInteractor
     {
         public int Handle(string filePath)
         {
-            var floors = fileManager.ReadFile(filePath);
+            var floors = fileReader.ReadAsString(filePath);
             var counter = 0;
 
             foreach (var floor in floors)

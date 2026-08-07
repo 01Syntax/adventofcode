@@ -1,6 +1,6 @@
-﻿using Moq;
+using AoC.Shared;
+using Moq;
 using NotQuiteLisp.Interactors;
-using NotQuiteLisp.Interfaces;
 
 namespace NotQuiteLisp.Tests.Interactors
 {
@@ -13,17 +13,14 @@ namespace NotQuiteLisp.Tests.Interactors
         [InlineData("())", -1)]
         public void Handle_GetCorrectSantaFloor(string data, int expectedFloor)
         {
-            // Arrange
-            var fileManagerMock = new Mock<IFileManager>();
-            fileManagerMock.Setup(x => x.ReadFile(It.IsAny<string>()))
+            var fileReaderMock = new Mock<IFileReader>();
+            fileReaderMock.Setup(x => x.ReadAsString(It.IsAny<string>()))
                 .Returns(data);
 
-            var sut = new GetFloorsInteractor(fileManagerMock.Object);
+            var sut = new GetFloorsInteractor(fileReaderMock.Object);
 
-            // Act
             var result = sut.Handle("ignored.txt");
 
-            // Assert
             Assert.Equal(expectedFloor, result);
         }
     }

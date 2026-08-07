@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using AoC.Shared;
+using Microsoft.Extensions.DependencyInjection;
 using NotQuiteLisp.Interactors;
 using NotQuiteLisp.Interfaces;
 using NotQuiteLisp.Managers;
@@ -12,7 +13,7 @@ namespace NotQuiteLisp
             var services = new ServiceCollection();
 
             services.AddTransient<App>();
-            services.AddTransient<IFileManager, FileManager>();
+            services.AddTransient<IFileReader, FileReader>();
             services.AddTransient<IGetFloorsInteractor, GetFloorsInteractor>();
             services.AddTransient<IGetPositionOfCharacterInteractor, GetPositionOfCharacterInteractor>();
 

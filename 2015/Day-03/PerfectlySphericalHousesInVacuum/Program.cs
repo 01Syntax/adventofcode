@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using AoC.Shared;
+using Microsoft.Extensions.DependencyInjection;
 using PerfectlySphericalHousesInVacuum.Interactors;
 using PerfectlySphericalHousesInVacuum.Interfaces;
 using PerfectlySphericalHousesInVacuum.Mappers;
@@ -12,7 +13,7 @@ namespace PerfectlySphericalHousesInVacuum
             var services = new ServiceCollection();
 
             services.AddTransient<App>();
-            services.AddTransient<IFileManager, FileManager.FileManager>();
+            services.AddTransient<IFileReader, FileReader>();
             services.AddTransient<IGetTotalHouseInteractor, GetTotalHouseInteractor>();
             services.AddTransient<IDirectionMapper, DirectionMapper>();
             services.AddTransient<IPartTwoGetTotalHouseInteractor, PartTwoGetTotalHouseInteractor>();
