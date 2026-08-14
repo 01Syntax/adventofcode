@@ -11,16 +11,22 @@ namespace ProbablyAFireHazard.Logic.Mappers
 
             for (int i = 0; i < lines.GetLength(0); i++)
             {
-                for (int j = 0; j < lines.GetLength(1); j++)
+                instructions.Add(new Instruction
                 {
-                    instructions.Add(new Instruction
-                    {
-                        Action = actionMapper.MapAction(lines[i, j]),
-                        Start = new Point(i, j),
-                        End = new Point(i, j)
-                    });
-                }
+                    Action = actionMapper.MapAction(lines[i, 0]),
+
+                    Start = new Point(
+                        int.Parse(lines[i, 1]),
+                        int.Parse(lines[i, 2])
+                    ),
+
+                    End = new Point(
+                        int.Parse(lines[i, 3]),
+                        int.Parse(lines[i, 4])
+                    )
+                });
             }
+
             return instructions;
         }
     }

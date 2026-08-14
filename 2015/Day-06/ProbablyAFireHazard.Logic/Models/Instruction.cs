@@ -1,9 +1,9 @@
 ﻿namespace ProbablyAFireHazard.Logic.Models
 {
-    public class Instruction
+    public record Instruction
     {
-        public LightAction Action { get; set; } = new LightAction();
-        public Point Start { get; set; } = new Point(0, 0);
-        public Point End { get; set; } = new Point(999, 999);
+        public LightAction Action { get; set; }
+        public Point Start { get; set; } = new(0, 0);
+        public Point End { get; set; } = new(999, 999);
     }
 }
