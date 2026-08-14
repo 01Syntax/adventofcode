@@ -5,7 +5,8 @@
         public static IEnumerable<object[]> GetInstructions() =>
         [
             [
-                new List<string> {
+                new List<string>
+                {
                     "turn on 887,9 through 959,629",
                     "turn on 454,398 through 844,448",
                     "turn off 539,243 through 559,965",
@@ -15,8 +16,8 @@
                 },
                 new string[,]
                 {
-                    { "on", "454", "398", "844", "448" },
                     { "on", "887", "9", "959", "629" },
+                    { "on", "454", "398", "844", "448" },
                     { "off", "539", "243", "559", "965" },
                     { "off", "370", "819", "676", "868" },
                     { "toggle", "0", "0", "999", "0" },
