@@ -2,7 +2,7 @@
 
 namespace ProbablyAFireHazard.Logic.Tests.MemberData
 {
-    public class LightsOn
+    public class LightsOnDataMember
     {
         public IEnumerable<object[]> GetData() =>
         [
