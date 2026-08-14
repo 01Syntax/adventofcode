@@ -10,5 +10,15 @@
     <ProjectReference Include="..\Day-06\ProbablyAFireHazard.Logic\ProbablyAFireHazard.Logic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DataSource\instructions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
+	<ItemGroup>
+		<None Update="DataSource\instructionss.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>
