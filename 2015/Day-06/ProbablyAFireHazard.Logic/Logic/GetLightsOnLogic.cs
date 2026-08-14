@@ -6,15 +6,32 @@ namespace ProbablyAFireHazard.Logic.Logic
     {
         public int Handle(List<Instruction> instructions)
         {
-            int count = 0;
+            var lightsOn = new HashSet<(int x, int y)>();
+
             foreach (var instruction in instructions)
             {
-                if (instruction.Action == LightAction.TurnOn)
+                for (int x = instruction.Start.X; x <= instruction.End.X; x++)
                 {
-                    count++;
+                    for (int y = instruction.Start.Y; y <= instruction.End.Y; y++)
+                    {
+                        switch (instruction.Action)
+                        {
+                            case LightAction.TurnOn:
+                                lightsOn.Add((x, y));
+                                break;
+                            case LightAction.TurnOff:
+                                lightsOn.Remove((x, y));
+                                break;
+                            case LightAction.Toggle:
+                                if (!lightsOn.Remove((x, y)))
+                                    lightsOn.Add((x, y));
+                                break;
+                        }
+                    }
                 }
             }
-            return count;
+
+            return lightsOn.Count;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace ProbablyAFireHazard.Logic.Tests.MemberData
                     Start = new Point(250, 250),
                     End = new Point(300, 300)
                 },
-                3
+                64203
             ]
         ];
     }
