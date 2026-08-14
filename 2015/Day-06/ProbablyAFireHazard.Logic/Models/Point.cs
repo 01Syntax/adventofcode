@@ -1,8 +1,9 @@
 ﻿namespace ProbablyAFireHazard.Logic.Models
 {
-    public class Point
+    public class Point(int x, int y)
     {
-        private int X { get; set; }
-        private int Y { get; set; }
+        public int X { get; set; } = x;
+        public int Y { get; set; } = y;
+
     }
 }
