@@ -1,29 +1,27 @@
-﻿using ProbablyAFireHazard.Logic.Interfaces;
-using ProbablyAFireHazard.Logic.Models;
+using ProbablyAFireHazard.Logic.Interfaces;
 
 namespace ProbablyAFireHazard.Logic.Helpers
 {
     public class ConvertTo2DArr : IConvertTo2DArr
     {
-        public string[,] Convert(IEnumerable<Instruction> instructions)
+        public string[,] Convert(IEnumerable<string> instructions)
         {
             var list = instructions.ToList();
             var arr = new string[list.Count, 5];
 
             for (int i = 0; i < list.Count; i++)
             {
-                var instruction = list[i];
-                arr[i, 0] = instruction.Action switch
-                {
-                    LightAction.TurnOn => "on",
-                    LightAction.TurnOff => "off",
-                    LightAction.Toggle => "toggle",
-                    _ => throw new ArgumentOutOfRangeException(nameof(instructions))
-                };
-                arr[i, 1] = instruction.Start.X.ToString();
-                arr[i, 2] = instruction.Start.Y.ToString();
-                arr[i, 3] = instruction.End.X.ToString();
-                arr[i, 4] = instruction.End.Y.ToString();
+                var parts = list[i].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                int startIndex = parts[0] == "turn" ? 1 : 0;
+
+                arr[i, 0] = parts[startIndex];
+
+                var startCoordinates = parts[startIndex + 1].Split(',');
+                var endCoordinates = parts[startIndex + 3].Split(',');
+                arr[i, 1] = startCoordinates[0];
+                arr[i, 2] = startCoordinates[1];
+                arr[i, 3] = endCoordinates[0];
+                arr[i, 4] = endCoordinates[1];
             }
             return arr;
         }

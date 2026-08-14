@@ -1,4 +1,4 @@
-﻿using AoC.Shared;
+using AoC.Shared;
 using ProbablyAFireHazard.Logic.Interfaces;
 
 namespace ProbablyAFireHazard
@@ -7,9 +7,10 @@ namespace ProbablyAFireHazard
     {
         public void Run(string filePath)
         {
-            var instructions = fileReader.ReadAsLines(filePath);
-            var mappedInstructions = instructionMapper.Map(instructions);
-            var lightsOn = getLightsOnLogic.GetLightsOn(mappedInstructions);
+            var lines = fileReader.ReadAsLines(filePath);
+            var lightGrid = convertTo2DArr.Convert(lines);
+            var instructions = instructionMapper.Map(lightGrid);
+            var lightsOn = getLightsOnLogic.Handle(instructions);
             Console.WriteLine($"Lights on: {lightsOn}");
         }
     }
