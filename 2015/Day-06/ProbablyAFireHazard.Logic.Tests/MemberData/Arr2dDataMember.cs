@@ -1,8 +1,8 @@
 ﻿namespace ProbablyAFireHazard.Logic.Tests.MemberData
 {
-    public class InstructionsDataMember
+    public class Arr2DDataMember
     {
-        public static IEnumerable<object[]> GetInstructions() =>
+        public static IEnumerable<object[]> Get2D() =>
         [
             [
                 new List<string>
@@ -14,7 +14,7 @@
                     "toggle 0,0 through 999,0",
                     "toggle 20,0 through 990,0"
                 },
-                new string[,]
+                new[,]
                 {
                     { "on", "887", "9", "959", "629" },
                     { "on", "454", "398", "844", "448" },

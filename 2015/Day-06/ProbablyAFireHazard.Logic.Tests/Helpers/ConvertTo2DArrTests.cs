@@ -6,7 +6,7 @@ namespace ProbablyAFireHazard.Logic.Tests.Helpers
     public class ConvertTo2DArrTests
     {
         [Theory]
-        [MemberData(nameof(InstructionsDataMember.GetInstructions), MemberType = typeof(InstructionsDataMember))]
+        [MemberData(nameof(Arr2DDataMember.Get2D), MemberType = typeof(Arr2DDataMember))]
         public void ConvertTo2DArr_Should_Return_Correct_2D_Array(List<string> instructions, string[,] expected)
         {
             // Arrange

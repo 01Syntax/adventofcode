@@ -7,7 +7,7 @@ namespace ProbablyAFireHazard.Logic.Tests.MemberData
         public static IEnumerable<object[]> GetInstructions() =>
         [
             [
-                new string[,]
+                new[,]
                 {
                     { "on", "887", "9", "959", "629" },
                     { "on", "454", "398", "844", "448" },

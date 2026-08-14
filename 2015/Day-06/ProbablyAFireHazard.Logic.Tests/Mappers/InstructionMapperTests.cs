@@ -1,13 +1,23 @@
-﻿using ProbablyAFireHazard.Logic.Models;
+﻿using ProbablyAFireHazard.Logic.Mappers;
+using ProbablyAFireHazard.Logic.Models;
+using ProbablyAFireHazard.Logic.Tests.MemberData;
 
 namespace ProbablyAFireHazard.Logic.Tests.Mappers
 {
-    public class InstructionMapper
+    public class InstructionMapperTests
     {
-        public Instruction Map(string line)
+        [Theory]
+        [MemberData(nameof(InstructionsDataMember.GetInstructions), MemberType = typeof(InstructionsDataMember))]
+        public void Map_ReturnListOfInstruction(string[,] input, List<Instruction> expected)
         {
-            // Implementation for mapping string to Instruction
-            return new Instruction();
+            // Arrange
+            var sut = new InstructionMapper();
+
+            // Act
+            var result = sut.Map(input);
+
+            // Assert
+            Assert.Equal(expected, result);
         }
     }
 }
