@@ -1,11 +1,18 @@
-﻿namespace AoC.Shared.Mappers
+﻿using ProbablyAFireHazard.Logic.Models;
+
+namespace AoC.Shared.Mappers
 {
     public class InstructionMapper
     {
-        public Instruction Map(string line)
+        public List<Instruction> Map(string[,] lines)
         {
-            // Implementation for mapping string to Instruction
-            return new Instruction();
+            var instructions = new List<Instruction>();
+
+            for (int i = 0; i < lines.GetLength(0); i++)
+            {
+                instructions.FirstOrDefault(x => x.Action == )
+            }
+            return instructions;
         }
     }
 }
