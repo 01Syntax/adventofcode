@@ -13,7 +13,7 @@ namespace ProbablyAFireHazard.Logic.Tests.Helpers
             var sut = new ConvertTo2DArr();
 
             // Act
-            var results = sut.Convert(instructions);
+            var results = sut.Convert(TODO);
 
             // Assert
             Assert.Equal(expected, results);
