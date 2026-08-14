@@ -3,5 +3,5 @@
   <Project Path="ProbablyAFireHazard.Logic/ProbablyAFireHazard.Logic.csproj" Id="7492c6b5-a26c-43e0-8e2d-caf8d710318a" />
   <Project Path="ProbablyAFireHazard/ProbablyAFireHazard.csproj" Id="00cf7bbb-6ae2-4dd6-927d-6e4613d7fb62" />
   <Project Path="../Shared/AoC.Shared.csproj" />
-  <Project Path="../AoC.Shared.Tests/AoC.Shared.Tests.csproj" />
+  <Project Path="../Shared/AoC.Shared.Tests/AoC.Shared.Tests.csproj" />
 </Solution>
