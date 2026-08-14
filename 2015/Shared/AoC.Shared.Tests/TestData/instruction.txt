@@ -1,4 +1,0 @@
-turn on 0,0 through 999,999
-turn on 100,100 through 200,200
-turn on 500,500 through 750,750
-turn off 250,250 through 300,300

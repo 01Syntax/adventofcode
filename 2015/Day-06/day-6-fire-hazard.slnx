@@ -1,7 +1,8 @@
 <Solution>
+  <Project Path="AoC.Shared.Tests/AoC.Shared.Tests.csproj" Id="ca527d20-b2a6-43dc-84ac-2a65366961bf" />
   <Project Path="ProbablyAFireHazard.Logic.Tests/ProbablyAFireHazard.Logic.Tests.csproj" Id="6daf328c-836e-409f-b9fa-3d340dc5b7b6" />
   <Project Path="ProbablyAFireHazard.Logic/ProbablyAFireHazard.Logic.csproj" Id="7492c6b5-a26c-43e0-8e2d-caf8d710318a" />
   <Project Path="ProbablyAFireHazard/ProbablyAFireHazard.csproj" Id="00cf7bbb-6ae2-4dd6-927d-6e4613d7fb62" />
   <Project Path="../Shared/AoC.Shared.csproj" />
-  <Project Path="../Shared/AoC.Shared.Tests/AoC.Shared.Tests.csproj" />
+
 </Solution>
