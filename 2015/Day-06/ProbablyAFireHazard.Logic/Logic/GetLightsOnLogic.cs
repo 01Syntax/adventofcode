@@ -1,8 +1,9 @@
-﻿using ProbablyAFireHazard.Logic.Models;
+﻿using ProbablyAFireHazard.Logic.Interfaces;
+using ProbablyAFireHazard.Logic.Models;
 
 namespace ProbablyAFireHazard.Logic.Logic
 {
-    public class GetLightsOnLogic
+    public class GetLightsOnLogic : IGetLightsOnLogic
     {
         public int Handle(List<Instruction> instructions)
         {

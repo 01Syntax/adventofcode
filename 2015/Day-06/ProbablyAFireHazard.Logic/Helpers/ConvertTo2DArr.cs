@@ -1,6 +1,8 @@
-﻿namespace ProbablyAFireHazard.Logic.Helpers
+﻿using ProbablyAFireHazard.Logic.Interfaces;
+
+namespace ProbablyAFireHazard.Logic.Helpers
 {
-    public class ConvertTo2DArr
+    public class ConvertTo2DArr : IConvertTo2DArr
     {
         public string[,] Convert(List<string> instructions)
         {

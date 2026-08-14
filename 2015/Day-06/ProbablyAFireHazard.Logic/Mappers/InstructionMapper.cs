@@ -3,7 +3,7 @@ using ProbablyAFireHazard.Logic.Models;
 
 namespace ProbablyAFireHazard.Logic.Mappers
 {
-    public class InstructionMapper(IActionMapper actionMapper)
+    public class InstructionMapper(IActionMapper actionMapper) : IInstructionMapper
     {
         public List<Instruction> Map(string[,] lines)
         {
