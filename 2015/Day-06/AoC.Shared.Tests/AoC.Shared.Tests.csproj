@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\AoC.Shared.csproj" />
+    <ProjectReference Include="..\ProbablyAFireHazard.Logic\ProbablyAFireHazard.Logic.csproj" />
   </ItemGroup>
 
   <ItemGroup>

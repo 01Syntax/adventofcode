@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AoC.Shared.Tests
+﻿namespace AoC.Shared.Tests
 {
     public class FileReaderTests
     {
@@ -10,9 +6,11 @@ namespace AoC.Shared.Tests
         public void ReadFile_ReturnListOfInstructions()
         {
             // Arrange
-            var sut =
+            var sut = new FileReader();
 
             // Act
+
+            var results = sut.ReadAs("DataSource/instruction.txt", (instruction) => line);
 
             // Assert
         }
