@@ -1,18 +1,20 @@
-﻿namespace ProbablyAFireHazard.Logic.Tests.MemberData
+﻿using ProbablyAFireHazard.Logic.Models;
+
+namespace ProbablyAFireHazard.Logic.Tests.MemberData
 {
     public class Arr2DDataMember
     {
         public static IEnumerable<object[]> Get2D() =>
         [
             [
-                new List<string>
+                new List<Instruction>
                 {
-                    "turn on 887,9 through 959,629",
-                    "turn on 454,398 through 844,448",
-                    "turn off 539,243 through 559,965",
-                    "turn off 370,819 through 676,868",
-                    "toggle 0,0 through 999,0",
-                    "toggle 20,0 through 990,0"
+                    new() { Action = LightAction.TurnOn, Start = new Point(887, 9), End = new Point(959, 629) },
+                    new() { Action = LightAction.TurnOn, Start = new Point(454, 398), End = new Point(844, 448) },
+                    new() { Action = LightAction.TurnOff, Start = new Point(539, 243), End = new Point(559, 965) },
+                    new() { Action = LightAction.TurnOff, Start = new Point(370, 819), End = new Point(676, 868) },
+                    new() { Action = LightAction.Toggle, Start = new Point(0, 0), End = new Point(999, 0) },
+                    new() { Action = LightAction.Toggle, Start = new Point(20, 0), End = new Point(990, 0) },
                 },
                 new[,]
                 {
