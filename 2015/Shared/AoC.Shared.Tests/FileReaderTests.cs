@@ -1,29 +1,25 @@
 namespace AoC.Shared.Tests;
 
-public class FileReaderTests : IDisposable
+public class FileReaderTests
 {
     private readonly FileReader _sut = new();
-    private readonly string _tempFile;
+    private static readonly string InstructionFile = Path.Combine(AppContext.BaseDirectory, "TestData", "instruction.txt");
 
-    public FileReaderTests()
-    {
-        _tempFile = Path.GetTempFileName();
-    }
-
-    public void Dispose()
-    {
-        if (File.Exists(_tempFile))
-            File.Delete(_tempFile);
-    }
+    private static readonly string[] ExpectedLines =
+    [
+        "turn on 0,0 through 999,999",
+        "turn on 100,100 through 200,200",
+        "turn on 500,500 through 750,750",
+        "turn off 250,250 through 300,300"
+    ];
 
     [Fact]
     public void ReadAsString_ReturnsFileContent()
     {
-        File.WriteAllText(_tempFile, "hello world");
+        var result = _sut.ReadAsString(InstructionFile);
 
-        var result = _sut.ReadAsString(_tempFile);
-
-        Assert.Equal("hello world", result);
+        Assert.Contains("turn on 0,0 through 999,999", result);
+        Assert.Contains("turn off 250,250 through 300,300", result);
     }
 
     [Fact]
@@ -37,11 +33,9 @@ public class FileReaderTests : IDisposable
     [Fact]
     public void ReadAsLines_ReturnsEachLineAsElement()
     {
-        File.WriteAllLines(_tempFile, ["line one", "line two", "line three"]);
+        var result = _sut.ReadAsLines(InstructionFile);
 
-        var result = _sut.ReadAsLines(_tempFile);
-
-        Assert.Equal(["line one", "line two", "line three"], result);
+        Assert.Equal(ExpectedLines, result);
     }
 
     [Fact]
@@ -55,11 +49,9 @@ public class FileReaderTests : IDisposable
     [Fact]
     public void ReadAs_MapsEachLineUsingMapper()
     {
-        File.WriteAllLines(_tempFile, ["1", "2", "3"]);
+        var result = _sut.ReadAs(InstructionFile, line => line.Split(' ')[0]);
 
-        var result = _sut.ReadAs(_tempFile, int.Parse);
-
-        Assert.Equal([1, 2, 3], result);
+        Assert.Equal(["turn", "turn", "turn", "turn"], result);
     }
 
     [Fact]
