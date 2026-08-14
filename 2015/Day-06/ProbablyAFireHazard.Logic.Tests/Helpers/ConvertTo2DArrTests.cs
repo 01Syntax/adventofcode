@@ -1,15 +1,24 @@
-﻿namespace ProbablyAFireHazard.Logic.Tests.Helpers
+﻿using ProbablyAFireHazard.Logic.Helpers;
+using ProbablyAFireHazard.Logic.Tests.MemberData;
+
+namespace ProbablyAFireHazard.Logic.Tests.Helpers
 {
-    public class ConvertTo2DArr
+    public class ConvertTo2DArrTests
     {
-        public string[,] Convert(List<string> lines)
+        [Theory]
+        [MemberData(nameof(InstructionsDataMember.GetInstructions), MemberType = typeof(InstructionsDataMember))]
+        public void ConvertTo2DArr_Should_Return_Correct_2D_Array(List<string> instructions, string[,] expected)
         {
-            var arr = new string[lines.Count, 1];
-            for (int i = 0; i < lines.Count; i++)
-            {
-                arr[i, 0] = lines[i];
-            }
-            return arr;
+            // Arrange
+            var sut = new ConvertTo2DArr();
+
+
+            // Act
+            var results = sut.Convert(instructions);
+
+
+            // Assert
+            Assert.Equal(expected, results);
         }
     }
 }
