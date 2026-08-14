@@ -1,8 +1,9 @@
-﻿using ProbablyAFireHazard.Logic.Models;
+﻿using ProbablyAFireHazard.Logic.Interfaces;
+using ProbablyAFireHazard.Logic.Models;
 
 namespace ProbablyAFireHazard.Logic.Mappers
 {
-    public class InstructionMapper
+    public class InstructionMapper(IActionMapper actionMapper)
     {
         public List<Instruction> Map(string[,] lines)
         {
@@ -14,7 +15,7 @@ namespace ProbablyAFireHazard.Logic.Mappers
                 {
                     instructions.Add(new Instruction
                     {
-                        Action = (LightAction)Enum.Parse(typeof(LightAction), lines[i, j]),
+                        Action = actionMapper.MapAction(lines[i, j]),
                         Start = new Point(i, j),
                         End = new Point(i, j)
                     });

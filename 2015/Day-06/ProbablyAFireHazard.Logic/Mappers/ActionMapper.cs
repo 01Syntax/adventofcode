@@ -1,10 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ProbablyAFireHazard.Logic.Interfaces;
+using ProbablyAFireHazard.Logic.Models;
 
 namespace ProbablyAFireHazard.Logic.Mappers
 {
-    p class ActionMapper
+    public class ActionMapper : IActionMapper
     {
+        public LightAction MapAction(string action)
+        {
+            return action switch
+            {
+                "turn on" => LightAction.TurnOn,
+                "turn off" => LightAction.TurnOff,
+                "toggle" => LightAction.Toggle,
+                _ => throw new ArgumentException($"Invalid action: {action}")
+            };
+        }
     }
 }
