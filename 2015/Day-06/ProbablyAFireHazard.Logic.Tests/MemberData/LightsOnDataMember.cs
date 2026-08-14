@@ -4,32 +4,38 @@ namespace ProbablyAFireHazard.Logic.Tests.MemberData
 {
     public class LightsOnDataMember
     {
-        public IEnumerable<object[]> GetData() =>
+        public static IEnumerable<object[]> GetData() =>
         [
             [
-                new Instruction
+                new List<Instruction>
                 {
-                    Action = LightAction.TurnOn,
-                    Start = new Point(0, 0),
-                    End = new Point(999, 999)
-                },
-                new Instruction
-                {
-                    Action = LightAction.TurnOn,
-                    Start = new Point(100, 100),
-                    End = new Point(200, 200)
-                },
-                new Instruction
-                {
-                    Action = LightAction.TurnOn,
-                    Start = new Point(500, 500),
-                    End = new Point(750, 750)
-                },
-                new Instruction
-                {
-                    Action = LightAction.TurnOff,
-                    Start = new Point(250, 250),
-                    End = new Point(300, 300)
+                    new()
+                    {
+                        Action = LightAction.TurnOn,
+                        Start = new Point(887, 9),
+                        End = new Point(959, 629)
+                    },
+
+                    new()
+                    {
+                        Action = LightAction.TurnOn,
+                        Start = new Point(454, 398),
+                        End = new Point(844, 448)
+                    },
+
+                    new()
+                    {
+                        Action = LightAction.TurnOff,
+                        Start = new Point(539, 243),
+                        End = new Point(559, 965)
+                    },
+
+                    new()
+                    {
+                        Action = LightAction.TurnOff,
+                        Start = new Point(370, 819),
+                        End = new Point(676, 868)
+                    },
                 },
                 64203
             ]

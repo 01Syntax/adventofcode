@@ -7,7 +7,7 @@ namespace ProbablyAFireHazard.Logic.Tests.Logic
     public class GetLightsOnLogicTests
     {
         [Theory]
-        [MemberData(nameof(OnInstructionsMember.GetOnInstructions), MemberType = typeof(OnInstructionsMember))]
+        [MemberData(nameof(LightsOnDataMember.GetData), MemberType = typeof(LightsOnDataMember))]
         public void Handle_ReturnsListOfInstructionsWithOn(List<Instruction> instructions, int expectedCount)
         {
             // Arrange
