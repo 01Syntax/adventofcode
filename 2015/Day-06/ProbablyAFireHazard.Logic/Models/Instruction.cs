@@ -1,4 +1,4 @@
-﻿namespace ProbablyAFireHazard.Models
+﻿namespace ProbablyAFireHazard.Logic.Models
 {
     public class Instruction
     {
