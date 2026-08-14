@@ -1,4 +1,6 @@
-﻿namespace AoC.Shared.Mappers
+﻿using ProbablyAFireHazard.Logic.Models;
+
+namespace ProbablyAFireHazard.Logic.Tests.Mappers
 {
     public class InstructionMapper
     {

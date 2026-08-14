@@ -1,4 +1,4 @@
-﻿namespace AoC.Shared.Mappers
+﻿namespace ProbablyAFireHazard.Logic.Mappers
 {
     public class InstructionMapper
     {

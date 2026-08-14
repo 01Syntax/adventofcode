@@ -1,4 +1,4 @@
-﻿namespace AoC.Shared.Helpers
+﻿namespace ProbablyAFireHazard.Logic.Helpers
 {
     public class ConvertTo2DArr
     {
