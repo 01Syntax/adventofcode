@@ -1,11 +1,10 @@
 ﻿using AoC.Shared;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using ProbablyAFireHazard.Logic.Interfaces;
 
 namespace ProbablyAFireHazard
 {
-    public class App(IFileReader fileReader,)
+    public class App(IFileReader fileReader, IGetLightsOnLogic getLightsOnLogic, IInstructionMapper instructionMapper)
     {
+
     }
 }
