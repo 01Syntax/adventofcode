@@ -18,7 +18,7 @@ namespace ProbablyAFireHazard.Logic.Helpers
                     LightAction.TurnOn => "on",
                     LightAction.TurnOff => "off",
                     LightAction.Toggle => "toggle",
-                    _ => throw new ArgumentOutOfRangeException(nameof(instruction.Action))
+                    _ => throw new ArgumentOutOfRangeException(nameof(instructions))
                 };
                 arr[i, 1] = instruction.Start.X.ToString();
                 arr[i, 2] = instruction.Start.Y.ToString();
