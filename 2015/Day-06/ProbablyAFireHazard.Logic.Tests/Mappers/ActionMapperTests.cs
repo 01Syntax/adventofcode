@@ -11,8 +11,8 @@ namespace ProbablyAFireHazard.Logic.Tests.Mappers
             // Arrange
             var sut = new ActionMapper();
             // Act & Assert
-            Assert.Equal(LightAction.TurnOn, sut.MapAction("turn on"));
-            Assert.Equal(LightAction.TurnOff, sut.MapAction("turn off"));
+            Assert.Equal(LightAction.TurnOn, sut.MapAction("on"));
+            Assert.Equal(LightAction.TurnOff, sut.MapAction("off"));
             Assert.Equal(LightAction.Toggle, sut.MapAction("toggle"));
         }
     }

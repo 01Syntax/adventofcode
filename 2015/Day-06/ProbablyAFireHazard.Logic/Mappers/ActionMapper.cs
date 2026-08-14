@@ -9,8 +9,8 @@ namespace ProbablyAFireHazard.Logic.Mappers
         {
             return action switch
             {
-                "turn on" => LightAction.TurnOn,
-                "turn off" => LightAction.TurnOff,
+                "on" => LightAction.TurnOn,
+                "off" => LightAction.TurnOff,
                 "toggle" => LightAction.Toggle,
                 _ => throw new ArgumentException($"Invalid action: {action}")
             };
