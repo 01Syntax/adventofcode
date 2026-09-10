@@ -21,7 +21,7 @@ namespace ProbablyAFireHazard
             services.AddTransient<App>();
 
             var serviceProvider = services.BuildServiceProvider();
-            var filePath = Path.Combine("DataSource", "instructions.txt");
+            var filePath = Path.Combine(AppContext.BaseDirectory, "DataSource", "instructions.txt");
             serviceProvider.GetRequiredService<App>().Run(filePath);
         }
     }
