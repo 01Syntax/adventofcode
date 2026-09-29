@@ -15,6 +15,7 @@ namespace ProbablyAFireHazard
 
             services.AddTransient<IConvertTo2DArr, ConvertTo2DArr>();
             services.AddTransient<IGetLightsOnLogic, GetLightsOnLogic>();
+            services.AddTransient<IGetTotalBrightnessLogic, GetTotalBrightnessLogic>();
             services.AddTransient<IInstructionMapper, InstructionMapper>();
             services.AddTransient<IFileReader, FileReader>();
             services.AddTransient<IActionMapper, ActionMapper>();

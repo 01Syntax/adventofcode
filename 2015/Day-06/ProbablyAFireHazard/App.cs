@@ -3,7 +3,7 @@ using ProbablyAFireHazard.Logic.Interfaces;
 
 namespace ProbablyAFireHazard
 {
-    public class App(IFileReader fileReader, IGetLightsOnLogic getLightsOnLogic, IInstructionMapper instructionMapper, IConvertTo2DArr convertTo2DArr)
+    public class App(IFileReader fileReader, IGetLightsOnLogic getLightsOnLogic, IGetTotalBrightnessLogic getTotalBrightnessLogic, IInstructionMapper instructionMapper, IConvertTo2DArr convertTo2DArr)
     {
         public void Run(string filePath)
         {
@@ -12,6 +12,9 @@ namespace ProbablyAFireHazard
             var instructions = instructionMapper.Map(lightGrid);
             var lightsOn = getLightsOnLogic.Handle(instructions);
             Console.WriteLine($"Lights on: {lightsOn}");
+
+            var totalBrightness = getTotalBrightnessLogic.Handle(instructions);
+            Console.WriteLine($"Total brightness: {totalBrightness}");
         }
     }
 }
