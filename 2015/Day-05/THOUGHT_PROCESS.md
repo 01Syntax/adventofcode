@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/2015/day/5
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Done | Done |
-
 ## 1. Understanding the problem
 
 Classify each string as nice or naughty using a set of rules and count the nice ones. Part 2 replaces the rules completely.

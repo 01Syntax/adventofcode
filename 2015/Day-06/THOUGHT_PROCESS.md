@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/2015/day/6
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Done | Not started |
-
 ## 1. Understanding the problem
 
 A 1000x1000 grid of lights. Instructions like `turn on 0,0 through 999,999`, `turn off ...` and `toggle ...` apply to rectangles. Part 1: how many lights are lit at the end?

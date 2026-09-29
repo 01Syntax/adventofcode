@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/YYYY/day/X
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Not started | Not started |
-
 ## 1. Understanding the problem
 
 _Restate the puzzle in my own words. What is the input? What is the output?_

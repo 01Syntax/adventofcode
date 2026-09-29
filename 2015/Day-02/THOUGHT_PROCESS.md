@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/2015/day/2
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Done | Done |
-
 ## 1. Understanding the problem
 
 Each line is a present's dimensions `LxWxH`. Part 1: total wrapping paper (surface area + the area of the smallest side). Part 2: total ribbon (smallest perimeter + volume for the bow).

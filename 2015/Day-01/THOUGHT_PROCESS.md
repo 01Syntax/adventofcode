@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/2015/day/1
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Done | Done |
-
 ## 1. Understanding the problem
 
 Santa follows a string of parentheses: `(` means go up one floor, `)` means go down one. Part 1: which floor does he end on? Part 2: at which (1-based) character position does he first enter the basement (floor -1)?

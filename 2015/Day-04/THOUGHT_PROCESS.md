@@ -2,10 +2,6 @@
 
 > Puzzle: https://adventofcode.com/2015/day/4
 
-| | Part 1 | Part 2 |
-|---|---|---|
-| Status | Done | Done |
-
 ## 1. Understanding the problem
 
 Find the lowest positive number which, appended to the secret key, produces an MD5 hash (in hex) starting with five zeros (Part 1) or six zeros (Part 2).
