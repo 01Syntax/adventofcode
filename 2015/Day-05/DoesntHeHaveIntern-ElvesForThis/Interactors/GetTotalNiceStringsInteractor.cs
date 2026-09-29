@@ -1,8 +1,8 @@
 ﻿using DoesntHeHaveIntern_ElvesForThis.Interfaces;
 
-namespace DoesntHeHaveIntern_ElvesForThis.interactors
+namespace DoesntHeHaveIntern_ElvesForThis.Interactors
 {
-    public class GetTotalNiceStringsPartTwoInteractor : IGetTotalNiceStringsPartTwoInteractor
+    public class GetTotalNiceStringsInteractor : IGetTotalNiceStringsInteractor
     {
         public async Task<int> Handle(List<string> niceStrings)
         {

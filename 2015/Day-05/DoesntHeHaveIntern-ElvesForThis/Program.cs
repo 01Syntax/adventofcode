@@ -1,6 +1,6 @@
 using AoC.Shared;
 using DoesntHeHaveIntern_ElvesForThis.Helpers;
-using DoesntHeHaveIntern_ElvesForThis.interactors;
+using DoesntHeHaveIntern_ElvesForThis.Interactors;
 using DoesntHeHaveIntern_ElvesForThis.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 

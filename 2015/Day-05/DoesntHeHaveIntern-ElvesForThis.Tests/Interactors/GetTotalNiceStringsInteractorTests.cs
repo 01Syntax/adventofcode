@@ -1,4 +1,4 @@
-﻿using DoesntHeHaveIntern_ElvesForThis.interactors;
+﻿using DoesntHeHaveIntern_ElvesForThis.Interactors;
 using DoesntHeHaveIntern_ElvesForThis.Tests.MemberData;
 
 namespace DoesntHeHaveIntern_ElvesForThis.Tests.Interactors
