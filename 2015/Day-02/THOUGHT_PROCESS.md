@@ -4,7 +4,7 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ✅ |
+| Status | Done | Done |
 
 ## 1. Understanding the problem
 
@@ -40,7 +40,7 @@ _Where I got stuck, wrong answers, bugs, and how I got past them._
 
 ## 7. Complexity
 
-- Time: `O(n)` — constant work per present
+- Time: `O(n)` - constant work per present
 - Space: `O(n)` for the parsed dimensions
 
 ## 8. What I learned / would do differently

@@ -4,7 +4,7 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ✅ |
+| Status | Done | Done |
 
 ## 1. Understanding the problem
 
@@ -39,7 +39,7 @@ _Where I got stuck, wrong answers, bugs, and how I got past them._
 
 ## 7. Complexity
 
-- Time: `O(n)` — one pass over the input
+- Time: `O(n)` - one pass over the input
 - Space: `O(1)` beyond the input string
 
 ## 8. What I learned / would do differently

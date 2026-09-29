@@ -4,11 +4,11 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ⬜ |
+| Status | Done | Not started |
 
 ## 1. Understanding the problem
 
-A 1000×1000 grid of lights. Instructions like `turn on 0,0 through 999,999`, `turn off …` and `toggle …` apply to rectangles. Part 1: how many lights are lit at the end?
+A 1000x1000 grid of lights. Instructions like `turn on 0,0 through 999,999`, `turn off ...` and `toggle ...` apply to rectangles. Part 1: how many lights are lit at the end?
 
 ## 2. First thoughts
 
@@ -26,8 +26,8 @@ _Not done yet._
 
 ## 4. Design decisions
 
-- Split into three projects: `ProbablyAFireHazard` (console app), `ProbablyAFireHazard.Logic` (parsing + logic), and tests — plus the shared `AoC.Shared` file reader.
-- Parsing (text → string array → `Instruction`) is kept separate from the light logic.
+- Split into three projects: `ProbablyAFireHazard` (console app), `ProbablyAFireHazard.Logic` (parsing + logic), and tests - plus the shared `AoC.Shared` file reader.
+- Parsing (text -> string array -> `Instruction`) is kept separate from the light logic.
 
 ## 5. Testing
 
@@ -39,7 +39,7 @@ _Where I got stuck, wrong answers, bugs, and how I got past them._
 
 ## 7. Complexity
 
-- Time: `O(i · a)` where `a` is the area of each rectangle
+- Time: `O(i * a)` where `a` is the area of each rectangle
 - Space: `O(lit lights)`, up to 1,000,000
 
 ## 8. What I learned / would do differently

@@ -4,7 +4,7 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ✅ |
+| Status | Done | Done |
 
 ## 1. Understanding the problem
 
@@ -39,7 +39,7 @@ _Where I got stuck, wrong answers, bugs, and how I got past them._
 
 ## 7. Complexity
 
-- Time: `O(n · m²)` worst case for the pair search (`m` = string length), `O(n · m)` for the other rules
+- Time: `O(n * m^2)` worst case for the pair search (`m` = string length), `O(n * m)` for the other rules
 - Space: `O(n)` for the list of nice strings
 
 ## 8. What I learned / would do differently

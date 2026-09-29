@@ -4,11 +4,11 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ✅ |
+| Status | Done | Done |
 
 ## 1. Understanding the problem
 
-Santa moves on an infinite grid following `^ v < >`. Part 1: how many houses get at least one present? Part 2: Santa and Robo-Santa take turns following the instructions — how many houses now?
+Santa moves on an infinite grid following `^ v < >`. Part 1: how many houses get at least one present? Part 2: Santa and Robo-Santa take turns following the instructions - how many houses now?
 
 ## 2. First thoughts
 

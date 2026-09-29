@@ -4,7 +4,7 @@
 
 | | Part 1 | Part 2 |
 |---|---|---|
-| Status | ✅ | ✅ |
+| Status | Done | Done |
 
 ## 1. Understanding the problem
 

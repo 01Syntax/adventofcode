@@ -6,19 +6,19 @@ This repository contains my solutions to the Advent of Code programming challeng
 
 ```
 adventofcode/
-├── README.md                         ← you are here
-├── docs/
-│   └── THOUGHT_PROCESS_TEMPLATE.md   ← copy this into each new day
-├── 2015/
-│   ├── Shared/                       ← AoC.Shared: code reused across days (e.g. FileReader)
-│   ├── Day-01/
-│   │   ├── THOUGHT_PROCESS.md        ← how I approached the problem
-│   │   ├── <PuzzleName>/             ← console app: Program.cs, App.cs, logic, DataSource/
-│   │   └── <PuzzleName>.Tests/       ← xUnit tests + MockData/
-│   ├── Day-02/
-│   └── ...
-├── 2016/
-└── ...
+  README.md                         - you are here
+  docs/
+    THOUGHT_PROCESS_TEMPLATE.md     - copy this into each new day
+  2015/
+    Shared/                         - AoC.Shared: code reused across days (e.g. FileReader)
+    Day-01/
+      THOUGHT_PROCESS.md            - how I approached the problem
+      <PuzzleName>/                 - console app: Program.cs, App.cs, logic, DataSource/
+      <PuzzleName>.Tests/           - xUnit tests + MockData/
+    Day-02/
+    ...
+  2016/
+  ...
 ```
 
 ### Inside a day
@@ -54,12 +54,12 @@ To start a new day, copy [`docs/THOUGHT_PROCESS_TEMPLATE.md`](docs/THOUGHT_PROCE
 
 | Day | Puzzle | Part 1 | Part 2 | Thought Process |
 |---|---|---|---|---|
-| 01 | [Not Quite Lisp](https://adventofcode.com/2015/day/1) | ⭐ | ⭐ | [Read](2015/Day-01/THOUGHT_PROCESS.md) |
-| 02 | [I Was Told There Would Be No Math](https://adventofcode.com/2015/day/2) | ⭐ | ⭐ | [Read](2015/Day-02/THOUGHT_PROCESS.md) |
-| 03 | [Perfectly Spherical Houses in a Vacuum](https://adventofcode.com/2015/day/3) | ⭐ | ⭐ | [Read](2015/Day-03/THOUGHT_PROCESS.md) |
-| 04 | [The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4) | ⭐ | ⭐ | [Read](2015/Day-04/THOUGHT_PROCESS.md) |
-| 05 | [Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5) | ⭐ | ⭐ | [Read](2015/Day-05/THOUGHT_PROCESS.md) |
-| 06 | [Probably a Fire Hazard](https://adventofcode.com/2015/day/6) | ⭐ | | [Read](2015/Day-06/THOUGHT_PROCESS.md) |
+| 01 | [Not Quite Lisp](https://adventofcode.com/2015/day/1) | Done | Done | [Read](2015/Day-01/THOUGHT_PROCESS.md) |
+| 02 | [I Was Told There Would Be No Math](https://adventofcode.com/2015/day/2) | Done | Done | [Read](2015/Day-02/THOUGHT_PROCESS.md) |
+| 03 | [Perfectly Spherical Houses in a Vacuum](https://adventofcode.com/2015/day/3) | Done | Done | [Read](2015/Day-03/THOUGHT_PROCESS.md) |
+| 04 | [The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4) | Done | Done | [Read](2015/Day-04/THOUGHT_PROCESS.md) |
+| 05 | [Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5) | Done | Done | [Read](2015/Day-05/THOUGHT_PROCESS.md) |
+| 06 | [Probably a Fire Hazard](https://adventofcode.com/2015/day/6) | Done | Not started | [Read](2015/Day-06/THOUGHT_PROCESS.md) |
 
 ## Running a Solution
 
